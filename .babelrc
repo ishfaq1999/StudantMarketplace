@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    ["@babel/plugin-transform-runtime", {
+      "corejs": 3
+    }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    ["@babel/plugin-proposal-private-methods", { "loose": true }],
+    ["@babel/plugin-transform-private-property-in-object", { "loose": true }],
+    ["module-resolver", {
+      "root": ["./app"],
+      "alias": {
+        "catalog": "./catalog",
+        "core": "./core",
+        "server": "./server",
+        "client": "./client",
+        "menu": "./menu",
+        "layout": "./layout"
+      }
+    }]
+  ]
+}
